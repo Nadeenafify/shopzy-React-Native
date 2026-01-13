@@ -46,22 +46,22 @@ supbase (Authentication)
 ## 📱 App Screenshots
 
 ### Home Page
-![Home Page](assets/screenshots/HomePage.jpeg)
+![Home Page](assets/screenShots/HomePage.jpeg)
 
 ### sign in page
-![Signin Page](assets/screenshots/SigIn.jpeg)
+![Signin Page](assets/screenShots/SigIn.jpeg)
 
 ### Product Details Page
 
-![Product Details Page](assets/screenshots/ProductDetails1.jpeg)
-![Product Details Page](assets/screenshots/ProductDetails2.jpeg)
+![Product Details Page](assets/screenShots/ProductDetails1.jpeg)
+![Product Details Page](assets/screenShots/ProductDetails2.jpeg)
 
 
 ### Favorites
-![Favorites Page](assets/screenshots/Favourites.jpeg)
+![Favorites Page](assets/screenShots/Favourites.jpeg)
 
 ### Cart Page
-![Cart Page](assets/screenshots/CartPage.jpeg)
+![Cart Page](assets/screenShots/CartPage.jpeg)
 
 ### Address Page
 ![address page](assets/screenShots/AddressPage1.jpeg)
