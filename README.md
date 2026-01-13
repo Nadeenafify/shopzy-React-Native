@@ -165,6 +165,10 @@ Place orders
 - Backend API
 - Order history
 
+
+## 🔗 Live Demo
+[Open in Expo Go](https://expo.dev/@your-username/project-name)
+
 ## 👤 Author
 - Name: Nadeen Ashraf
 - GitHub: https://github.com/Nadeenafify
