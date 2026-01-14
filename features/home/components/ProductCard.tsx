@@ -31,14 +31,15 @@ const ProductCard: React.FC<ProductCardProps> = ({ item }) => {
           onPress={() => {
             if (user?.id)
               toggleFavorite(item)
-            else{
-                  Toast.show({
-                    type:"error",
-                    text1:"please login or signup first",
-                    visibilityTime:2000
-                  })
+            else {
+              Toast.show({
+                type: "error",
+                text1: "please login or signup first",
+                visibilityTime: 2000
+              })
+              router.push("/account")
             }
-          }}  
+          }}
         >
           <MaterialCommunityIcons
             name={user?.id ? isFavorite(item.id) ? "heart" : "heart-outline" : "heart-outline"}

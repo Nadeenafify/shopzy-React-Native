@@ -1,11 +1,12 @@
 import { categories, Product } from '@/types/home'
-import React from 'react'
+import React, { memo, useCallback } from 'react'
 import { FlatList, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import ProductCard from './ProductCard'
 import useFetchProducts from '../hooks/useFetchProducts'
 import EvilIcons from '@expo/vector-icons/EvilIcons';
 import { useCategory } from '@/context/CategorySelected'
 import { useAuth } from '@/context/AuthContext'
+import CategoryButton from './CategoryButton'
 
 
 const HomePage = () => {
@@ -26,6 +27,10 @@ const HomePage = () => {
     const { category, setCategory } = useCategory()
 
 
+
+    const handleSelectCategory = useCallback((slug: string) => {
+        setCategory(slug);
+    }, []);
 
 
     return (
@@ -52,30 +57,24 @@ const HomePage = () => {
             {loading && renderShimmer()}
             {error && <Text className='text-red-500'>Error when getting Products</Text>}
 
-
-
             <View className='h-10 my-3'>
 
-                <ScrollView
+                <FlatList<categories>
                     horizontal
+                    data={categories}
+                    keyExtractor={(item) => (item?.slug).toString()}
+                    renderItem={({ item }) => (
+                        <CategoryButton item={item} category={category} onSelect={handleSelectCategory} />
+                    )}
+                    showsHorizontalScrollIndicator={false}
+                />
 
-                >
-
-                    {
-                        categories.map((item: categories, index) => {
-                            return (
-                                <TouchableOpacity
-                                    key={index}
-                                    onPress={() => { setCategory(item.slug) }}
-                                    className={` flex ${category === item.slug ? "bg-red-400 " : "bg-gray-200"}  p-2 mx-2 rounded-xl justify-center items-center`}>
-                                    <Text className={`${category === item.slug ? "text-white" : "text-gray-500"}  font-bold`}>{item.name}</Text>
-                                </TouchableOpacity>
-                            )
-                        })
-                    }
-                </ScrollView>
 
             </View>
+
+
+
+
 
 
             {(!loading && !error && products.length > 0) &&

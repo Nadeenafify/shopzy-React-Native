@@ -93,6 +93,7 @@ const useFetchProducts = () => {
     }, [searchProductInput]);
 
     useEffect(() => {
+        setLoading(true)
         fetchProducts();
     }, [category])
 
