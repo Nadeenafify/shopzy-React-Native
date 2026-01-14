@@ -166,8 +166,9 @@ Place orders
 - Order history
 
 
-## 🔗 Live Demo
-[Open in Expo Go](https://expo.dev/@your-username/project-name)
+## 🔗 Live Demo Video
+[![Demo Video](assets/screenShots/HomePage.jpg)](https://drive.google.com/file/d/1nek9rGdwUN2WrawXLRcz4lHuKJfAlEez/view?usp=sharing)
+
 
 ## 👤 Author
 - Name: Nadeen Ashraf
